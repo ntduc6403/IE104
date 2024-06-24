@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặt Tour</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .header{
+            color: blue;
+            font-size: 40px;
+            text-align: center;
+           
+        }
+        .box{
+           
+            position: absolute;
+            color: blue;
+            top: 53%; 
+            left: 50%; 
+            transform: translate(-50%, -50%); 
+        }
+        table{
+            background-color: rgb(255, 255, 205);
+            border-collapse: collapse;
+        
+        }
+        table tr td{
+            border: 2px solid blue;
+            /* border-collapse: collapse; */
+            /* font-size: 50px; */
+            width: 400px;
+            height: 50px;
+        }
+        .box_mini{
+            
+            margin-top: 20px;
+            width: 500px;
+            height: 45px;
+            display: flex;
+        }
+        .box_mini::before,
+        .box_mini::after
+       {
+            content: '';
+            height: 1px;
+            background-color: #333;
+            flex-grow: 1;
+            width: 20px;
+            
+        }
+        .Big_Box{
+            /* font-size: 30px; */
+            height: 100px;
+        }
+        .DiaChi,
+         .GhiChu {
+            width: 300px;
+            height: 80px;
+        }
+        .KhachVietNam {
+            width: 270px;
+        }
+        #thongbao{
+            text-align: center;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="header"><p>Đăng Ký Du Lịch</p></div>
+    <div class="box">
+        <table>
+            <tr>
+                <td>Khách Việt Nam</td>
+                <td><input type="text" class="KhachVietNam" value=""></td>
+            </tr>
+            <tr class="Big_Box">
+                <td>Địa Chỉ</td>
+                <td><textarea name="DiaChi" class="DiaChi" cols="30" rows="10"></textarea></td>
+            </tr>
+            <tr>
+                <td>Điện thoại</td>
+                <td><input type="text" class="DienThoai"></td>
+            </tr>
+            <tr>
+                <td>Khách Việt Nam</td>
+                <td><input type="checkbox" name=""></td>
+            </tr>
+            <tr>
+                <td>Chọn Tour</td>
+                <td><select name="Chọn Tour" id="" value="Chọn Tour">
+                    <option value="1" disabled selected style="color: red;">Miền Bắc</option>
+                    <option value="2">Hà Nội - Hạ Long - Sapa</option>
+                    <option value="3">Hà Nội - Chùa Hương - Ninh Bình </option>
+                    <option value="4">Hà Nội - Cát Bà - Tuần Châu</option>
+                    <option value="5" disabled selected style="color: red;">Miền Trung</option>
+                    <option value="6">Huế - Bạch Mã - Đà Nẵng                    </option>
+                    <option value="7">Nha Trang - Đà Lạt                    </option>
+                    <option value="8">Buôn Mê Thuột - Gia Lai - Kontum                    </option>
+                    <option value="9" disabled selected style="color: red;">Miền Nam</option>
+                    <option value="10">TpHCM - Cần Thơ - Cà Mau                  </option>
+                    <option value="11">Phú Quốc - Côn Đảo </option>
+                    
+                    
+
+                </select></td>
+            </tr>
+            <tr>
+                <td>Phương Tiện</td>
+                <td>
+
+                    <input type="radio" class="MayBay" name="MayBay">
+                    <label for="MayBay">Máy Bay</label>
+                    <input type="radio" class="XeDuLich" name="XeDuLich">
+                    <label for="XeDuLich">Xe Du Lịch</label>
+                </td>
+            </tr>
+            <tr >
+             
+                
+                <td colspan="2" class="SoLuong" >
+                <div class="box_mini"> Số Lượng Đoàn Khách</div>   
+                    <label for="NguoiLon"> Người Lớn</label>
+                    <input type="text" class="NguoiLon">
+                    <label for="TreEm">Trẻ Em</label>
+                    <input type="text" class="TreEm">
+                    
+
+                </td>
+            </tr>
+            <tr class="Big_Box">
+                <td>Ghi Chú Thêm</td>
+                <td><textarea name="GhiChu" class="GhiChu" cols="30" rows="10"></textarea></td>
+            </tr>
+            <tr style="text-align: center;">
+                <td colspan="2"><button id="Yes">Đồng Ý</button></td>
+                <!-- <td></td> -->
+            </tr>
+            <tr> 
+                <td colspan="2" id="thongbao">
+                    Bấm Nút Để Đăng Ký
+                </td>
+               
+            </tr>
+        </table>
+    </div>
+    <script>
+        let login = document.getElementById("Yes");
+        let thongbao = document.getElementById("thongbao")
+        login.addEventListener("click", function(){
+            thongbao.innerHTML= "Bạn Đã Đăng Ký Thành Công !!!";
+        });
+    </script>
+</body>
+</html>

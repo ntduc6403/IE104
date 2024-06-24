@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phiếu Đăng Ký</title>
+</head>
+<style>
+    h1{
+        color: aliceblue;
+        text-align: center;
+        text-shadow: 3px 0px blue ;
+    }
+    .box1{
+        background-color: rgb(205, 255, 254);
+        /* width: 800px; */
+    }
+    table {
+        position: absolute;
+            top: 50%; 
+            left: 50%; 
+            transform: translate(-50%, -50%); 
+        background-color: rgb(205, 255, 254);
+        height: 500px;
+        width: 500px;
+        color: blue;
+        z-index: 1;
+        /* border: 3px outset blue ; */
+        box-shadow: 3px 3px blue;   
+        border-radius: 20px;
+        z-index: 1;
+        /* opacity: 0.8; */
+            
+
+    }
+    .img{
+        position: relative;
+        background: url(./acexts/khuyen-mai.png) center/contain no-repeat;
+        /* width:  320px; */
+        height: 320px;
+        top: 200px;
+        z-index: 2;
+        
+
+    }
+    input {
+        background-color: rgb(162, 204, 254);
+    }
+    #login{
+         background-color: blue;
+         position: absolute;
+         left: 190px;
+         width: 130px;
+    }
+    #thongbao{
+        position: relative;
+        left: 180px;
+        bottom: 1px;
+    }
+    td{
+        position: relative;
+        left: 20px;
+        
+    }
+</style>
+
+<body>
+    <h1>Phiếu Đăng Ký Tham Gia Chương Trình Khuyến Mãi</h1>
+    <div id="box1"><table>
+        <Tr>
+            <td>Họ Tên: </td>
+            <td><input type="text"></td>
+        </Tr>
+
+
+        <Tr> <td>Địa Chỉ: </td>
+            <td><input type="text"></td></Tr>
+
+        <Tr> <td>Điện Thoại: </td>
+            <td><input type="text"></td></Tr>
+        <Tr> <td>Giới Tính: </td>
+            <td> <input type="radio" id="vehicle1" name="vehicle1" value="Nam">
+                <label for="vehicle1"> Nam</label>
+                <input type="radio" id="vehicle2" name="vehicle2" value="Nu">
+                <label for="vehicle2"> Nữ</label></td></Tr>
+        <Tr> <td>Nghề Nghiệp: </td>
+            <td><select name="" id="">
+                <option value="">Kem Đánh Răng</option>
+                <option value="">Bột Giặt</option>
+                <option value="">Dầu Gội Đầu</option>
+                <option value="">Sữa Tắm</option>
+            </select></Tr>
+        <Tr> <td>Số Người Dự Đoán Tham Gia: </td>
+            <td><input type="text"></td></Tr>
+        <Tr><td><button id="login">Đồng Ý</button></td></Tr>
+        <tr><td id="thongbao">Trạng Thái Đăng Ký</td></tr>
+    </table>
+    <div class="img"></div>
+</div>
+
+    <script>
+        let login = document.getElementById("login");
+        let thongbao = document.getElementById("thongbao");
+        login.addEventListener("click", function(){
+            thongbao.innerHTML = "Bạn Đã Đăng Ký Thành Công";
+        });
+    </script>
+</body>
+</html>

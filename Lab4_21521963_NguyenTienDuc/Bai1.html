@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ Phương Trình</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+    <style>
+        /* .header{
+            text-align: center;
+            position: absolute;
+            top: 250px;
+            left: 650px;
+        } */
+
+        .content{
+            
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="header"> </div> 
+    <div class="content">
+        <table>
+            <tr>
+                <td><h2>Giải Phương Trình Bậc I</h2></td>
+            </tr>
+            <tr>
+               <td> <input type="text" id="a" value=""><br></td>
+
+            </tr>
+            <tr><td>
+                <input type="text" id="b" value="">
+            </td></tr>
+            <tr>
+       
+        <td> <button id="btn">Giải Phương Trình</button></td>
+            </tr>
+        </table>
+       
+        <p>KẾT QUẢ</p>
+        <div class="result">  </div>
+    </div>
+    <script>
+        // dùng kiểu Object 
+     $(document).ready(function(){
+        $("#btn").click(function(){
+           let a = $("#a").val();
+           let b = $("#b").val();
+           
+           if (a == 0 && b == 0) {
+            $(".result").text('Vô Nghiệm');
+           }else if(a == 0 && b !=0){
+            $(".result").text('Vô Số Nghiệm');
+
+           }else{
+            $(".result").text("Nghiệm X =" + -b/a);
+           }
+        });
+
+     });
+    </script>
+</body>
+</html>

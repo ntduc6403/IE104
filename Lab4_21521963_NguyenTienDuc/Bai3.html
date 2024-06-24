@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.5.1-web/fontawesome-free-6.5.1-web/css/all.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Liên Hệ</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .header{
+            color: blue;
+            margin-top: 20px;
+            /* margin-bottom: 10px; */
+        }
+        .container{
+            display: flex;
+        }
+        .info{
+            flex: 0.45;
+            /* width: 40%; */
+            margin: 30px 10px;
+        }
+       
+        li{
+            color: grey;
+            margin: 30px 15px;
+            letter-spacing: 1px;
+            list-style: none;
+        }
+        i{
+           margin-right: 20px;
+        }
+        .contact{
+            flex: 1;
+        }
+        h4{
+            color: violet;
+            letter-spacing: 1px;
+            margin: 30px 0;
+        }
+        input, textarea{
+            padding: 10px 20px;
+            width: 800px;
+            margin: 15px;
+        }
+        #btn{
+            
+            margin-left: 15px;
+            background-color: rgb(95, 158, 160);
+            padding: 10px 0;
+            padding-left: 18px;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Liên Hệ</h1>
+        
+        <hr style="height: 2px; color: red; background-color: red; margin: 10px 0;">
+    </div>
+    <div class="container">
+        <div class="info">
+            <ul>
+                Thông Tin
+                <li><i class="fa-solid fa-location-dot"></i>
+                    Kp.6 P Linh Trung , Tp Thủ Đức</li>
+                <li><i class="fa-solid fa-envelope"></i>
+                    21521963@uit.edu.vn</li>
+                <li><i class="fa-solid fa-phone-volume"></i>
+                    +94 123456789</li>
+            </ul>
+        </div>
+        <div class="contact">
+            <table>
+                <h4>Hãy Liên Lạc Với Chúng Tôi Bất Cứ Lúc Nào!!</h4>
+                <tr>
+                    <td><input type="text" id="name" placeholder="Họ Và Tên"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="mail" placeholder="Địa Chỉ E-mail"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="tit" placeholder="Tiêu Đề Bài Viết"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <textarea name="" id="comment" cols="30" rows="10" placeholder="Nội Dung Cần Gửi" ></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button id="btn"> Gửi Tin Nhắn <i class="fa-solid fa-check"></i></button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+           
+           
+            
+            $("#btn").click(function(){
+                let name = $("#name").val();
+            let mail = $("#mail").val();
+            let tit = $("#tit").val();
+            let cmt = $("#comment").val();
+               confirm("Họ Và Tên: " + name +
+                "\nE_mail: " + mail + 
+                "\nTiêu Đề Bài Viết: " + tit +
+                "\nNội Dung Cần Gửi: " + cmt 
+               
+               );
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản Phẩm</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            /* font-family: Arial, Helvetica, sans-serif; */
+        }
+        .header{
+            margin-top: 10px;
+            font-size: 30px;
+            font-weight: 700;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        .container{
+            display: flex;
+            padding-top: 50px;
+        }
+        .introduce{
+            font-size: 15px;
+            text-align: center;
+            margin: 20px 20px;
+            font-style: italics;
+           
+        }
+        .box1{
+            box-sizing: border-box;
+            flex: 1;
+            padding-left: 80px;     
+        }
+        .box2{
+            flex :1;
+        }
+        .box3{
+            flex: 1;
+        }
+        .box1_img{
+            background: url(./acexts/01_.jpg) top center/contain no-repeat;
+            height: 240px;
+            width: 360px;
+            
+        }
+        .box2_img{
+            background: url(./acexts/02.jpg) top center/contain no-repeat;
+            height: 240px;
+            width: 360px;
+            
+        }
+        .box3_img{
+            background: url(./acexts/03.jpg) top center/contain no-repeat;
+            height: 240px;
+            width: 360px;
+            
+        }
+        .box1_name{
+            font-size: 25px;
+            font-weight: 580;
+            margin: 20px 0;
+
+        }
+        .box1_info,
+        .box2_info,
+        .box3_info{
+            display: none;
+            font-size: 15px;
+            box-sizing: border-box;
+            color: rgb(83, 81, 82);
+            line-height: 22px;
+            
+        }
+        .box1_view{
+            margin-bottom: 20px;
+            letter-spacing: 0.8px;
+        }
+        .box1_information{
+            width: 75%;
+
+        }
+        #Box1_button,
+        #Box2_button,
+        #Box3_button{
+            margin-top: 30px;
+            background-color: white;
+            text-align: center;
+            width: 100px;
+            height: 40px;
+            color: rgb(83, 81, 82);
+            border-color: rgb(135, 132, 133);
+        }
+        #Box1_button:hover,
+        #Box2_button:hover,
+        #Box3_button:hover{
+            background-color: rgb(83, 81, 82);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">LAPTOP DÀNH CHO HỌC TRỰC TUYẾN</div>
+    <div class="introduce">
+        Do ảnh hưởng của dịch COVID-19, trong năm học mới này, nhiều học sinh tại một số tỉnh, thành phố như Hà Nội, TP.HCM sẽ phải tiến hành học tập qua hình thức online (trực tuyến), dẫn đến nhu cầu tìm mua máy tính xách tay (laptop) để học online tăng cao so với mọi năm. Các mẫu laptop hỗ trợ tốt trong học trực tuyến có thể tham khảo:
+    </div>
+    <div class="container">
+        
+        <div class="box1">
+            <div class="box1_img"></div>
+            <div class="box1_name">SURFACE LAPTOP 3 13.5</div>
+            <div class="box1_info">
+                <p class="box1_view">@Ngọc Hoàng  09  Sep 2021  (Đã xem: 1024)</p>
+                <p class="box1_information">Thông tin sản phẩm và bảo hành <br>
+                    Tình trạng: Sản phẩm mới 100%, nguyên seal <br>
+                    Bảo hành: 12 tháng, 1 đổi 1 theo chính sách của Microsoft <br>
+                    Phụ kiện: Máy, Sạc, Full Box</p>
+                    
+            </div>
+            <button id="Box1_button">Đọc Tiếp...</button>
+        </div>
+        <div class="box2">
+            <div class="box2_img"></div>
+            <div class="box1_name">Laptop Samsung X180 Barbie</div>
+            <div class="box2_info">
+                <p class="box1_view">@Minh Anh 08 Sep 2021 (Đã xem: 979)                </p>
+                <p class="box1_information">Thông tin sản phẩm và bảo hành <br>
+                    Tình trạng: Sản phẩm mới 100%, nguyên seal <br>
+                    Bảo hành: 24 tháng, 1 đổi 1 theo chính sách của SamSung <br>
+                    Phụ kiện: Máy, Sạc, Full Box</p>
+                    
+            </div>
+            <button id="Box2_button">Đọc Tiếp...</button>
+        </div>
+        <div class="box3">
+            <div class="box3_img"></div>
+            <div class="box1_name">ThinkPad X1 Carbon Gen 9</div>
+            <div class="box3_info">
+                <p class="box1_view">@Ngọc Ánh 06 Sep 2021 (Đã xem: 530)</p>
+                <p class="box1_information">Thông tin sản phẩm và bảo hành <br>
+                    Tình trạng: Sản phẩm mới 100%, nguyên seal <br>
+                    Bảo hành: 18 tháng, 1 đổi 1 theo chính sách của Lenovo <br>
+                    Phụ kiện: Máy, Sạc, Full Box</p>
+                    
+            </div>
+            <button id="Box3_button">Đọc Tiếp...</button>
+        </div>
+    </div>
+    <!-- javascript -->
+    <script>
+       $(document).ready(function (){
+        $("#Box1_button").click(function (){
+            $(".box1_info").toggle();
+           
+        });
+
+        $("#Box2_button").click(function(){
+            $(".box2_info").toggle();
+        });
+        $("#Box3_button").click(function(){
+            $(".box3_info").toggle();
+        });
+       });  
+    </script>
+</body>
+</html>

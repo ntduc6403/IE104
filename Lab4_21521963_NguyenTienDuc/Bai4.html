@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính Chỉ Số BMI</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+    
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .container{
+        background-image: linear-gradient(to right, rgb(153, 228, 153) , rgb(67, 67, 205));
+        width: 700px;
+        height: 500px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    table{
+     background-color: white; 
+    
+     /* width: 300px;   */
+     height: 400px;
+     border-radius: 10px;
+     position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* text-align: center; */
+        padding-top: 20px;
+
+    }
+    .header_tab{
+        
+        font-size: 30px;    
+        text-align: center;
+        background-color: rgb(0, 115, 255);
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        width: 268px;
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: aliceblue;
+        z-index: 1;
+    }
+    tr td{
+       padding: 10px 5px;
+       /* width: 250px; */
+    }
+    input, select{
+        width: 250px;
+        border: 2px solid grey;
+    }
+    .res_txt{
+        text-align: center;
+        font-weight: 900;
+    }
+    #btn{
+        
+            padding: 10px 40px;
+            background-color: #0C96F1;
+            color: #f2f2f2;
+            
+            margin-left: 55px;
+            border-radius: 5px;
+    }
+    #result1{
+        color: blue;
+        text-align: center;
+    }
+    #result2 ,
+    #result3{
+        color: red;
+        text-align: center;
+        font-weight: 900;
+    }
+</style>
+<body>
+    <div class="container">
+        <table>
+            
+            <p class="header_tab">Tính chỉ số BMI</p>
+            
+            <tr>
+                <td>
+                    <label for="weight">Nhập Cân Nặng?</label><br>
+                    <input type="text" id="weight" >
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="height">Nhập Chiều Cao?</label><br>
+                    <input type="text" id="height" >
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="age">Chọn Loại Tuổi</label><br>
+                    <select name="" id="age">
+                       <option value="1">Trung niên</option>
+                       <option value="2">Trung niên, Già lớn tuổi</option>
+                       <option value="3">Già, lớn tuổi</option>
+
+                    </select>
+                </td>
+            </tr>
+            <tr ><td ><button id="btn" >Tính BMI</button></td></tr>
+            <tr>
+                <td class="res_txt">KẾT QUẢ</td>
+            </tr>
+            <tr>
+                <td id="result1"></td>
+            </tr>
+            <tr>
+                <td id="result2"></td>
+            </tr>
+            <tr>
+                <td id="result3"></td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        $(document).ready(function(){
+           
+            
+            $("#btn").click(function(){
+             let weight = parseFloat($("#weight").val());
+            let height = parseFloat($("#height").val());
+            let age = $("#age").val();
+            let kq = (weight)/Math.pow(height, 2);
+            // kq.toFixed(2);
+                if(kq<18.5){
+                    $("#result1").text(kq);
+                    $("#result2").text("Dưới Chuẩn !");   
+                    $("#result3").text(" ");
+
+
+                }else if(kq > 18.5 && kq < 24.8){
+                    $("#result1").text(kq);
+                    $("#result2").text("Bình Thường");
+                    $("#result3").text(" ");
+
+
+                }else if(kq > 25 && kq < 29.9){
+                    $("#result1").text(kq);
+                    $("#result2").text("Thừa Cân");
+                    $("#result3").text(" ");
+
+
+                }else if(kq > 30 && kq < 34.9){
+                    $("#result1").text(kq);
+                    $("#result2").text("Béo Phì Cấp Độ 1");
+                    $("#result3").text("Khám Định Kỳ");
+
+
+                }else if(kq > 35 && kq < 39.9){
+                    $("#result1").text(kq);
+                    $("#result2").text("Béo Phì Cấp Độ 2");
+                    $("#result3").text("Tập Thể Dục Thường Xuyên");
+
+                }else if(kq > 40){
+                    $("#result1").text(kq);
+                    $("#result2").text("Béo Phì Cấp Độ 3");
+                    $("#result3").text("Hạn Chế Ăn Mỡ Động Vật");
+
+                }
+            
+            });
+        });
+    </script>
+</body>
+</html>

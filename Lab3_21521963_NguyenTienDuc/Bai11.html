@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Đăng Nhập</title>
+
+    <style>
+        .box1 {
+            position: absolute;
+            top: 50%; 
+            left: 50%; 
+            transform: translate(-50%, -50%); 
+            border: 3px dashed rgb(140, 67, 66);
+            border-radius: 10px;
+            width: 50%;
+            height: 40%;
+            z-index: 1;
+            
+        }
+        .img_login{
+            background: url(./acexts/login.jpg) center/contain no-repeat;
+            height: 270px;
+            position: relative;
+            top: 230px;
+            left: 260px;
+
+        }
+        .title{
+            text-align: center;
+            font-size: 40px;
+           color: red;
+        }
+        .pass{
+            position: absolute;
+            /* padding: 30px 30px; */
+            left: 250px;
+            bottom: 69px;
+        }
+        .name{
+            position: absolute;
+            left: 210px;
+        }
+        #user{
+            font-size: 20px;
+            position: absolute;
+            left: 330px;
+            top: 125px;
+            border: 3px dashed rgb(140, 67, 66);
+            border-radius: 10px;
+            background-color: rgb(255, 204, 202);
+            
+
+        }
+        #password{
+            position: absolute;
+            left: 330px;
+            font-size: 20px;
+            bottom: 80px;
+            border: 3px dashed rgb(140, 67, 66);
+            border-radius: 10px;
+            background-color: rgb(255, 204, 202);
+
+
+        }
+        #login{
+            background-color: red;
+            color: aliceblue;
+            /* font-size: 20px; */
+            width: 120px;
+            height: 30px;
+            position: absolute;
+            left: 350px;
+            bottom: 30px;
+            border: 2px inset grey;
+            border-radius: 10px;
+
+        }
+    </style>
+   
+</head>
+<body>
+    
+    <div class="box1">
+        <h2 class="title">Form Đăng Nhập</h2>
+        <p class="name">Tên Người Dùng</p>
+        <input type="text" id="user">
+        <p class="pass">Mật Khẩu</p>
+        <input type="text" id="password">
+        <br>
+        <button id="login" type="button" > Đăng Nhập </button>
+
+    </div>
+    <div class="img_login"></div>
+    <script>
+        let user = document.getElementById("user").value;
+        let pass = document.getElementById("password").value;
+        let login = document.getElementById("login");
+
+        login.addEventListener("click", function(){
+            alert("Chào Bạn");
+        });
+
+    </script>
+</body>
+</html>

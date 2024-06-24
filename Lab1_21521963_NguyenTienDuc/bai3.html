@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Định dạng Văn Bản</title>
+    <style>
+        .conteiner{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        h1{
+            /* align-items: center;
+             */
+             display: flex;
+             justify-content: center;
+        }
+
+        .box{
+            display: flex;
+             justify-content: center;
+            background-color: grey;
+            color: blue;
+            width: 500px;
+            height: 150px ;
+        }
+    </style>
+</head>
+<body >
+    <div class="conteiner">
+        <h1 style="color: green;">Định Dạng Văn Bản</h1>
+     <pre><b><u>Hóa Học:</u></b>Nước: <span style="color: red;">H<sub>2</sub>O</span> ; <i>Axit Sunfuric</i> <span style="color: red;">H<sub>2</sub>SO<sub>4</sub></span> </pre>  
+     <pre><b><u>Toán Học:</u></b> <i>Phương Trình Bậc 2: </i><span style="color: red;">ax<sup>2</sup>+bx+c = 0</span></pre>
+     <pre><b><u>Tin Học:</u></b> <i>Vòng lặp for: </i></pre> 
+     <div class="box">
+        <pre>
+            int tong = 0;
+for(int i = 1; i <= 10; i++)
+	tong += i; 
+printf("Tong cac so tu 1 => 10 la: %d\n",tong);
+        </pre>
+     </div>
+    </div>
+</body>
+</html>

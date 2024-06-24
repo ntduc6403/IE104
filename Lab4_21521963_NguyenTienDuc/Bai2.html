@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đóng Góp</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+    <style>
+        .header{
+            text-align: center;
+        }
+        .header h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            color: purple;
+        }
+        .header p{
+            color: rgb(83, 81, 82);
+        }
+        table{
+            box-sizing: border-box;
+            
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #f2f2f2;
+            width: 800px;
+            height: 500px;
+            
+
+        }
+        input{
+            width: 250px;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            margin-left: 55px;
+        }
+        textarea{
+            box-sizing: border-box;
+            margin-left: 55px;
+            width: 690px;
+        }
+        #btn{
+            position: relative;
+            right: 341px;
+            bottom: 20px;
+            padding: 10px 20px;
+            background-color: #0C96F1;
+            color: #f2f2f2;
+            align-items: flex-start;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Đóng Góp Ý Kiến Về Sản Phẩm</h1>
+        <p>Góp Ý Của Bạn Sẽ Được Chúng Tôi Xem Xét, Vui Lòng Nhập Tiếng Việt Có Dấu</p>
+        <p>Các Ý Kiến Riêng nên viết chi tiết rõ ràng , kèm theo các minh chứng xác thực thời gian và địa điểm (Nếu Có )</p>
+    </div>
+    <div class="container">
+        <table>
+            <tr class="row-1">
+                <td >
+                    <input type="text" placeholder="Họ Và Tên" class="name">
+                </td>
+                <td>
+                    <input type="text" placeholder="Mã Thẻ" class="code">
+                </td>
+            </tr >
+            <tr class="row-2">
+                <td >
+                    <input type="text" placeholder="Số Điện Thoại" class="phone">
+                </td>
+                <td>
+                    <input type="text" placeholder="E-mail" class="mail">
+                </td>
+            </tr>
+            <tr class="row-3">
+                <td >
+                    <input type="text" placeholder="Chọn loại khách hàng" class="type">
+                </td>
+                <td>
+                    <input type="text" placeholder="Mã Hóa Đơn" class="bills">
+                </td>
+            </tr>
+            <tr class="row-4"> 
+               <td colspan="2">
+                <textarea name="" id="details" cols="30" rows="10" placeholder="Nhập Chi Tiết Mô Tả"></textarea></td> 
+                
+            </tr>
+            <td class="row-5" >
+                <td> <button id="btn">Gửi Góp Ý</button></td>
+            </td>
+            
+        </table>
+        <script>
+           $(document).ready(function(){
+            $("#btn").click(function(){
+             let name = $(".name").val();
+             let code = $(".code").val();
+             let phone = $(".phone").val();
+             let mail = $(".mail").val();
+             let type= $(".name").val();
+             let bills = $(".bills").val();
+             let details = $("#details").val();
+            
+
+                confirm("Họ Tên: " + name +
+                "\nMã Thẻ: " +code +
+                "\nSố Điện Thoại: " + phone +
+                "\nE_mail: " + mail +
+                "\nLoại KH: " + type +
+                "\nMã HD: " + bills +
+                "\nNội Dung Góp Ý: " + details
+                );
+            });
+           
+           });
+        </script>
+    </div>
+</body>
+</html>
